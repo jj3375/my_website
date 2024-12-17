@@ -3,97 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Scholar Portfolio</title>
+    <title>Jackson J - Research Scholar Portfolio</title>
     <style>
+        /* General Styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
             color: #333;
-            background-color: #f9f9f9;
-        }
-        header {
-            background: #004d99;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            font-size: 1.2em;
-            margin: 5px 0 0;
-        }
-        nav {
-            text-align: center;
-            margin-top: 20px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2em;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        section {
-            margin-bottom: 30px;
+            background-color: #f4f4f9;
         }
         h2 {
             color: #004d99;
-            border-bottom: 2px solid #004d99;
-            padding-bottom: 5px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        a {
+            text-decoration: none;
+            color: #004d99;
+        }
+        a:hover {
+            color: #003366;
+        }
+
+        /* Header Section */
+        header {
+            position: relative;
+            background: url('https://source.unsplash.com/1600x900/?technology,cryptography') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        header p {
+            font-size: 1.4em;
+            margin-top: 10px;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            font-size: 1.2em;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* Container */
+        .container {
+            width: 85%;
+            margin: 30px auto;
+        }
+
+        /* Profile Section */
+        .profile {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #004d99;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section Layout */
+        section {
+            margin-bottom: 30px;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        section:hover {
+            transform: translateY(-5px);
         }
         ul {
-            list-style: none;
-            padding: 0;
+            list-style: square;
+            padding-left: 20px;
         }
-        ul li {
-            margin-bottom: 10px;
+
+        /* Publication Cards */
+        .publication {
+            border-left: 5px solid #004d99;
+            margin-bottom: 15px;
+            padding-left: 10px;
         }
-         .profile-picture {
-            display: block;
-            margin: 20px auto;
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border: 3px solid #004d99;
-        }
+
+        /* Footer */
         footer {
-            text-align: center;
-            padding: 10px;
-            background: #004d99;
+            background-color: #004d99;
             color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            text-align: center;
+            padding: 15px 10px;
         }
         footer a {
             color: #ffd700;
-            text-decoration: none;
         }
-        footer a:hover {
-            text-decoration: underline;
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <h1> Jackson J </h1>
-        <p>Research Scholar in Algebraic cryptography</p>
+        <h1>Jackson J</h1>
+        <p>Research Scholar in Algebraic Cryptography</p>
         <nav>
             <a href="#about">About</a>
             <a href="#research">Research</a>
@@ -101,64 +134,71 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
+
+    <!-- Profile Image -->
     <div class="container">
-        <img src="My_pic.jpg" alt="Jackson J" class="profile-picture">
+        <div class="profile">
+            <img src="https://via.placeholder.com/180" alt="Profile Picture">
+            <p><strong>SRM Institute of Science and Technology, India</strong></p>
+        </div>
+
+        <!-- About Section -->
         <section id="about">
             <h2>About Me</h2>
             <p>
-                Welcome to my website! I am a passionate researcher specializing in Algebraic cryptography. 
-                My work focuses on Tropical algebra and its applications in cryptography. Currently I am working in chaos based image encryption.  
-                I am currently affiliated with SRM Institute of Science and Technology, Kattankulathur, India.
+                I am a passionate researcher specializing in Algebraic Cryptography, Tropical Algebra, and its applications.
+                My current focus is on chaos-based image encryption techniques that push the boundaries of secure communication.
             </p>
         </section>
+
+        <!-- Research Interests -->
         <section id="research">
             <h2>Research Interests</h2>
             <ul>
-                <li>Topic 1: Tropical algebra</li>
-                <li>Topic 2: Cryptography</li>
-                <li>Topic 3: Image encryption</li>
+                <li>Tropical Algebra and its Applications</li>
+                <li>Cryptography Techniques</li>
+                <li>Chaos-based Image Encryption</li>
             </ul>
         </section>
+
+        <!-- Publications -->
         <section id="publications">
             <h2>Publications</h2>
-            <ul>
-                <li>
-                    <strong>Title:</strong> <i>A robust image encryption technique based on an improved fractional order chaotic map </i><br>
-                    <strong>Journal:</strong> Nonlinear Dynamics, 2024.<br>
-                    <strong>Authors:</strong>Jackson J and Perumal R.<br> 
-                    <strong>Link:</strong> <a href="[Link]"> https://link.springer.com/article/10.1007/s11071-024-10480-7 </a>
-                </li>
-                <li>
-                    <strong>Title:</strong> <i>A novel 2D Hyperchaotic Sine Logistic map based image encryption scheme</i><br>
-                    <strong>Journal:</strong> Journal of Optics, 2024.<br>
-                    <strong>Authors:</strong> Jackson J and Perumal R.<br>
-                    <strong>Link:</strong> <a href="[Link]"> https://link.springer.com/article/10.1007/s12596-024-02280-4 </a>
-                </li>
-                <li>
-                    <strong>Title:</strong> <i>A secure key exchange protocol for Industrial Internet of Things based on tropical triad matrix semiring </i><br>
-                    <strong>Journal:</strong> International Journal of Information Technology, 2024.<br>
-                    <strong>Authors:</strong> Jackson J and Perumal R.<br>
-                    <strong>Link:</strong> <a href="[Link]"> https://link.springer.com/article/10.1007/s41870-024-02276-0 </a>
-                </li>
-            </ul>
+            <div class="publication">
+                <strong>Title:</strong> <i>A robust image encryption technique based on an improved fractional order chaotic map</i><br>
+                <strong>Journal:</strong> Nonlinear Dynamics, 2024<br>
+                <strong>Authors:</strong> Jackson J, Perumal R<br>
+                <a href="https://link.springer.com/article/10.1007/s11071-024-10480-7">Read More</a>
+            </div>
+            <div class="publication">
+                <strong>Title:</strong> <i>A novel 2D Hyperchaotic Sine Logistic map based image encryption scheme</i><br>
+                <strong>Journal:</strong> Journal of Optics, 2024<br>
+                <strong>Authors:</strong> Jackson J, Perumal R<br>
+                <a href="https://link.springer.com/article/10.1007/s12596-024-02280-4">Read More</a>
+            </div>
+            <div class="publication">
+                <strong>Title:</strong> <i>A secure key exchange protocol for Industrial Internet of Things</i><br>
+                <strong>Journal:</strong> International Journal of Information Technology, 2024<br>
+                <strong>Authors:</strong> Jackson J, Perumal R<br>
+                <a href="https://link.springer.com/article/10.1007/s41870-024-02276-0">Read More</a>
+            </div>
         </section>
+
+        <!-- Contact Section -->
         <section id="contact">
             <h2>Contact</h2>
-            <p><strong>Official Email:</strong> jj3375@srmist.edu.in</p>
-            <p><strong>Personal Email:</strong> jackson.j478@gmail.com</p>
-            <p><strong>Phone:</strong> +91 8072874948</p>
-            <p><strong>Address:</strong> Department of Mathematics, College of Engineering and Technology, SRM Institute of Science and Technology</p>
-            <p>
-                <strong>Social Links:</strong><br>
-                <a href="[https://www.linkedin.com/in/jackson-john-005642214/]">LinkedIn</a> | 
-                <a href="[https://scholar.google.com/citations?user=rHgjmrQAAAAJ&hl=en]">Google Scholar</a> | 
-                <a href="[https://github.com/jj3375/]">GitHub</a>
-            </p>
+            <p>Email: <a href="mailto:jj3375@srmist.edu.in">jj3375@srmist.edu.in</a></p>
+            <p>Phone: +91 8072874948</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/jackson-john-005642214/">Profile</a></p>
+            <p>GitHub: <a href="https://github.com/jj3375/">Projects</a></p>
         </section>
     </div>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Mr. Jackson J | Built with 💻 and ☕</p>
+        <p>&copy; 2024 Jackson J | Built with 💻 and ☕</p>
     </footer>
 </body>
 </html>
+
 
