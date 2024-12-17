@@ -26,11 +26,41 @@
         a:hover {
             color: #003366;
         }
+#research ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#research li {
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #004d99;
+    padding: 8px 0;
+    transition: color 0.3s;
+}
+
+#research li:hover {
+    color: #ffd700;
+}
+
+/* Hidden Paragraphs */
+.interest-description {
+    display: none;
+    margin-top: 15px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Display Paragraph on Click */
+.interest-description.active {
+    display: block;
+}
 
         /* Header Section */
         header {
             position: relative;
-            background: url('https://source.unsplash.com/1600x900/?technology,cryptography') no-repeat center center/cover;
+            background: url('IRONMAN.jpg') no-repeat center center/cover;
             color: white;
             text-align: center;
             padding: 70px 20px;
@@ -60,20 +90,7 @@
             width: 85%;
             margin: 30px auto;
         }
-
-        /* Profile Section */
-        .profile {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .profile img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #004d99;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+       
 
         /* Section Layout */
         section {
@@ -98,6 +115,50 @@
             margin-bottom: 15px;
             padding-left: 10px;
         }
+ 	/* Education Section */
+ 	#education {
+    		background-color: #f9f9f9;
+    		padding: 30px;
+    		border-radius: 8px;
+    		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    		margin-bottom: 30px;
+    		text-align: center;
+		}
+
+		.education-container {
+    		display: flex;
+    		flex-wrap: wrap;
+    		justify-content: center;
+    		gap: 20px;
+	}
+
+		.education-card {
+    		background: white;
+    		border: 2px solid #004d99;
+    		border-radius: 8px;
+    		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    		width: 300px;
+    		padding: 20px;
+    		transition: transform 0.3s ease, box-shadow 0.3s ease;
+    		text-align: left;
+	}
+
+		.education-card:hover {
+    		transform: translateY(-10px);
+    		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+	}
+
+		.education-card h3 {
+    		color: #004d99;
+    		margin-top: 0;
+    		font-size: 1.4em;
+	}
+
+		.education-card p {
+    		margin: 5px 0;
+    		color: #333;
+    		line-height: 1.4;
+ 	}
 
         /* Footer */
         footer {
@@ -120,27 +181,161 @@
                 margin: 5px 0;
             }
         }
+#gallery {
+        text-align: center;
+        margin: 50px 0;
+    }
+
+    #gallery h2 {
+        font-size: 2.5em;
+        color: #004d99;
+        margin-bottom: 10px;
+    }
+
+    #gallery p {
+        font-size: 1.1em;
+        color: #555;
+        margin-bottom: 30px;
+    }
+
+    .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        justify-items: center;
+    }
+
+    .gallery-item {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s;
+        border-radius: 8px;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+
+    /* Lightbox Effect */
+    .gallery-item a {
+        display: block;
+    }
+/* Header Styling */
+    header {
+        background: url('IRONMAN.jpg') no-repeat center center/cover;
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-content {
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 3.5em;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+ 	padding-top: 5px; 
+    }
+
+    header p {
+        font-size: 1.4em;
+        font-weight: 400;
+        margin-top: 10px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Navigation Bar Styling */
+    nav {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        gap: 30px;
+    }
+
+    nav a {
+        color: #fff;
+        font-size: 1.2em;
+        font-weight: 500;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 8px 15px;
+        border-radius: 4px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    nav a:hover {
+        background-color: #ffd700; /* Gold color on hover */
+        color: #004d99;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 2.5em;
+        }
+        nav {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+a {
+    text-decoration: none;
+    color: #004d99;
+    font-size: 1.2em;
+}
+
+a i {
+    margin-right: 8px;
+    font-size: 0.7em; /* Make the icon size larger */
+    color: #004d99;
+    transition: color 0.3s;
+}
+
+a:hover i {
+    color: #ffd700; /* Change icon color on hover */
+}
+
+a:hover {
+    color: #ffd700;
+}
     </style>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <!-- Header Section -->
     <header>
+    <div class="header-content">
         <h1>Jackson J</h1>
         <p>Research Scholar in Algebraic Cryptography</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#research">Research</a>
-            <a href="#publications">Publications</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <!-- Profile Image -->
-    <div class="container">
-        <div class="profile">
-            <img src="https://via.placeholder.com/180" alt="Profile Picture">
-            <p><strong>SRM Institute of Science and Technology, India</strong></p>
-        </div>
+    </div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
         <!-- About Section -->
         <section id="about">
@@ -153,13 +348,44 @@
 
         <!-- Research Interests -->
         <section id="research">
-            <h2>Research Interests</h2>
-            <ul>
-                <li>Tropical Algebra and its Applications</li>
-                <li>Cryptography Techniques</li>
-                <li>Chaos-based Image Encryption</li>
-            </ul>
-        </section>
+    <h2>Research Interests</h2>
+    <ul>
+        <li class="interest" data-target="tropical-cryptography">Tropical Cryptography</li>
+        <li class="interest" data-target="chaotic image encryption">Chaotic Image Encryption</li>
+        <li class="interest" data-target="algebraic music theory">Algebraic Music Theory</li>
+    </ul>
+
+    <!-- Explanations -->
+    <div id="tropical-cryptography" class="interest-description">
+        <p>
+            Tropical cryptography is a cryptographic approach that uses the algebraic structure of the tropical semiring, a mathematical system in which the usual operations of addition and multiplication are replaced by minimum (or maximum) and addition, respectively. In this context, "addition" refers to the minimum (or maximum) operation, and "multiplication" refers to regular addition. This non-standard algebraic structure has been explored for its potential applications in secure communication and cryptography, offering an alternative to traditional number-theoretic approaches like those based on integer factorization or elliptic curve cryptography. Tropical cryptography uses the properties of tropical semirings to create cryptographic primitives such as encryption schemes, digital signatures, and key exchange protocols. The tropical operations introduce new challenges and opportunities for the design of cryptographic protocols that are resistant to certain types of attacks. While tropical cryptography is a relatively novel field, it provides intriguing possibilities, particularly in the context of algebraic geometry and quantum information theory. Its resilience to certain attacks and its ability to operate efficiently in specific computational settings may lead to new methods of securing communications and storing data, especially in environments where traditional cryptographic methods face limitations. However, tropical cryptography is still an area of ongoing research and development.
+        </p>
+    </div>
+    <div id="chaotic image encryption" class="interest-description">
+        <p>
+            Chaotic image encryption is a method of securing digital images using chaotic systems, which are nonlinear dynamic systems that exhibit sensitive dependence on initial conditions. This property, known as chaos, makes the system's behavior unpredictable and difficult to reverse without the exact initial parameters, providing a strong basis for encryption. In chaotic image encryption, the pixel values of an image are transformed through a series of complex, deterministic operations inspired by chaotic maps such as the Logistic map, Henon map, or fractional chaotic maps. The encryption process typically involves two phases: confusion and diffusion. Confusion rearranges the pixel values to obscure the relationship between the plaintext image and its ciphertext. Diffusion spreads the pixel values across the entire image to ensure that a change in one pixel influences the entire image, making it harder to decipher. Chaotic systems are particularly suitable for image encryption because they can produce complex, non-repeating patterns with a small change in initial conditions, enhancing security. Additionally, the pseudorandomness of chaotic sequences makes it difficult for attackers to reverse-engineer the encryption process without knowledge of the secret key. This method is efficient, fast, and can be applied to various image formats, offering strong security for image transmission in fields like digital forensics, medical imaging, and multimedia.
+        </p>
+    </div>
+    <div id="algebraic music theory" class="interest-description">
+        <p>
+            Algebraic music theory is an approach to understanding and analyzing music using concepts from abstract algebra, such as groups, rings, and fields. It applies mathematical structures to describe the relationships between musical elements like notes, chords, and scales. This theory helps formalize and generalize musical concepts in ways that can reveal deeper patterns and connections within music. In algebraic music theory, musical structures are often modeled as mathematical objects. For example, musical intervals, which represent the difference in pitch between two notes, can be studied using group theory, where the group operations correspond to intervallic relationships. A common structure used is the *set theory*, where pitch classes (pitches without regard to octave) are treated as elements of a group. This allows for the analysis of scales and chords in terms of their mathematical properties, such as symmetry and transposition. Other applications of algebraic music theory include understanding harmonic progressions, voice leading, and rhythm through the lens of algebraic operations. By treating musical concepts algebraically, it becomes possible to explore symmetries, transformations, and invariants within music, offering new insights into composition and analysis. This approach not only aids in music theory but also contributes to algorithmic composition, music generation, and computer-assisted music analysis.
+        </p>
+    </div>
+</section>
+<script>
+        // Function to toggle the description visibility when an interest is clicked
+        const interests = document.querySelectorAll('.interest');
+        
+        interests.forEach(interest => {
+            interest.addEventListener('click', () => {
+                const targetId = interest.getAttribute('data-target');
+                const targetDescription = document.getElementById(targetId);
+                
+                // Toggle visibility of the clicked interest's description
+                targetDescription.classList.toggle('active');
+            });
+        });
+    </script>
 
         <!-- Publications -->
         <section id="publications">
@@ -202,15 +428,77 @@
             </div>
         </section>
 
+ 	<section id="education">
+    <h2>Educational Background</h2>
+    <div class="education-container">
+        <div class="education-card">
+            <h3>Bachelor of Science in Mathematics</h3>
+            <p><strong>Loyola College, Chennai</strong></p>
+            <p>2016 - 2019</p>
+            <p>Key Interests: Calculus, Graph theory & Music theory.
+        </div>
+        <div class="education-card">
+            <h3>Master of Science in Mathematics</h3>
+            <p><strong>University of Madras, Chennai</strong></p>
+            <p>2019 - 2021</p>
+            <p>Key Interests: Linear algebra, PDE & Algebraic music theory.</p>
+        </div>
+        <div class="education-card">
+            <h3>PhD in Mathematics</h3>
+            <p><strong>SRM Institute of Science and Technology, Katttankulathur</strong></p>
+            <p>2022 - Present</p>
+            <p>Specialization: Algebraic cryptography & Chaotic image encryption.</p>
+        </div>
+    </div>
+</section>
+
+
+	<section id="gallery">
+    <h2>Gallery</h2>
+    <p>Here are some moments captured during various conferences and workshops I have attended.</p>
+
+    <div class="gallery-container">
+        <!-- Gallery Items -->
+        <div class="gallery-item">
+            <a href="GRI.jpg" target="_blank">
+                <img src="GRI.jpg" alt="Conference Image 1" />
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="Presidency.jpg" target="_blank">
+                <img src="Presidency.jpg" alt="Conference Image 2" />
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="CUSAT.jpg" target="_blank">
+                <img src="CUSAT.jpg" alt="Conference Image 3" />
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="ICNCS.jpg" target="_blank">
+                <img src="ICNCS.jpg" alt="Conference Image 4" />
+            </a>
+        </div>
+ <div class="gallery-item">
+            <a href="BIT.jpg" target="_blank">
+                <img src="BIT.jpg" alt="Conference Image 4" />
+            </a>
+        </div>
+        <!-- Add more gallery items as needed -->
+    </div>
+</section>
+
+
+
         <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:jj3375@srmist.edu.in">jj3375@srmist.edu.in</a></p>
-            <p>Phone: +91 8072874948</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/jackson-john-005642214/">Profile</a></p>
-            <p>GitHub: <a href="https://github.com/jj3375/">Projects</a></p>
-            <p>Google Scholar: <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=rHgjmrQAAAAJ">Articles</a></p>
-        </section>
+       <section id="contact">
+    	<h2>Contact</h2>
+    	<p>Email: <a href="mailto:jj3375@srmist.edu.in">jj3375@srmist.edu.in</a></p>
+    	<p>Phone: +91 8072874948</p>
+    	<p>LinkedIn: <a href="https://www.linkedin.com/in/jackson-john-005642214/" target="_blank"><i class="fab fa-linkedin"></i> Profile</a></p>
+    	<p>GitHub: <a href="https://github.com/jj3375/" target="_blank"><i class="fab fa-github"></i> Projects</a></p>
+    	<p>Google Scholar: <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=rHgjmrQAAAAJ" target="_blank"><i class="fab fa-google"></i> Articles</a></p>
+	</section>
     </div>
 
     <!-- Footer -->
