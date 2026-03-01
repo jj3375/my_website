@@ -260,6 +260,22 @@
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     }
 
+	.book-button {
+    display: inline-block;
+    background-color: #004d99;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+.book-button:hover {
+    background-color: #ffd700;
+    color: #004d99;
+    transform: translateY(-3px);
+}	
+
     /* Navigation Bar Styling */
     nav {
         position: absolute;
@@ -549,7 +565,15 @@ a:hover {
     </div>
 </section>
 
-
+<section id="book">
+    <h2>Book</h2>
+    <p><strong>Title:</strong> Chaos Based Secure Quantum Communication Systems</p>
+    <p>
+        <a href="Neilson and Chuang.pdf" download class="book-button">
+            <i class="fas fa-book"></i> Download Book (PDF)
+        </a>
+    </p>
+</section>
 
         <!-- Contact Section -->
        <section id="contact">
